@@ -1,0 +1,25 @@
+{
+  "name": "capstone-project",
+  "version": "1.0.0",
+  "description": "backend apis for group 73 NC apps",
+  "main": "apis.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "capstone-73"
+  },
+  "keywords": [
+    "capstone"
+  ],
+  "author": "Irene Nakiyingi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "chai": "^5.1.0",
+    "express": "^4.19.1",
+    "mocha": "^10.3.0",
+    "mongoose": "^8.2.3"
+  }
+}
