@@ -8,7 +8,7 @@ const adminRoutes = require('./api/routes/admin');
 app.use('/user', userRoutes);
 
 //admin routes
-app.use('./admin', adminRoutes);
+app.use('/admin', adminRoutes);
 
 //app.use((req, res, next)=> {
   //  res.status(200).json({
