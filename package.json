@@ -2,9 +2,10 @@
   "name": "capstone-project",
   "version": "1.0.0",
   "description": "backend apis for group 73 NC apps",
-  "main": "apis.js",
+  "main": "app.js",
   "scripts": {
     "test": "mocha"
+    
   },
   "repository": {
     "type": "git",
@@ -18,8 +19,9 @@
   "dependencies": {
     "body-parser": "^1.20.2",
     "chai": "^5.1.0",
+    "dotenv": "^16.4.5",
     "express": "^4.19.1",
     "mocha": "^10.3.0",
-    "mongoose": "^8.3.1"
+    "mongoose": "^8.3.2"
   }
 }

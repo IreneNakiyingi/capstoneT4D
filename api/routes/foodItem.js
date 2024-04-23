@@ -7,6 +7,7 @@ const foodItemSchema = new mongoose.Schema({
   price: { type: Number, required: true },
   imageUrl: { type: String, required: true },
   category: { type: String, required: true }
+  //createdAt :{type:date, required:true}
 });
 
 module.exports = mongoose.model('FoodItem', foodItemSchema);

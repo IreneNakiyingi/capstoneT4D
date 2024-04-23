@@ -5,7 +5,16 @@ const router = express.Router();
 const FoodItem = require('./foodItem');
 // db setup
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/myapp', {useNewUrlParser: true, useUnifiedTopology: true});
+const dotenv = require('dotenv');
+
+//loading variables from dotenv
+dotenv.config();
+//connect to mongo db
+mongoose.connect(process.env.MONGODB_URI,
+  // 'mongodb://localhost/myapp', 
+  {useNewUrlParser: true, 
+  useUnifiedTopology: true
+});
 
 const db = mongoose.connection;
 
@@ -31,7 +40,7 @@ router.get('/',async (req,res,next) => {
     //});
 });
 //getting one item
-router.get('/:itemId', getFoodItem, (req,res,next) => {
+router.get('/:itemId', (req,res,next) => {
     
     res.status(200).json(
     res.foodItem
@@ -58,7 +67,7 @@ router.post('/', async (req,res,next) => {
 });
 
 //updating
-router.put('/:id', getFoodItem, async (req, res) => {
+router.put('/:id',  async (req, res) => {
     if (req.body.name != null) {
       res.foodItem.name = req.body.name;
     }
